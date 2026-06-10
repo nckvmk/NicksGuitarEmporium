@@ -3,6 +3,11 @@ body {
     font-family: "Century Gothic", serif;
 }
 
+h1 {
+    font-family: "Special Gothic Expanded One", sans-serif;
+    text-align: center;
+}
+
 .special-gothic-expanded-one-regular {
     font-family: "Special Gothic Expanded One", sans-serif;
     font-weight: 400;
@@ -10,6 +15,10 @@ body {
     font-kerning: normal;
 }
 
+nav {
+    position: sticky;
+    top: 0;
+}
 
 .navbar-brand {
     font-family: "Special Gothic Expanded One", serif;
@@ -18,4 +27,8 @@ body {
 .nav-link {
     font-weight: 600;
     text-align: center;
+}
+
+footer {
+
 }
