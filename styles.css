@@ -1,0 +1,21 @@
+body {
+    background: ghostwhite;
+    font-family: "Century Gothic", serif;
+}
+
+.special-gothic-expanded-one-regular {
+    font-family: "Special Gothic Expanded One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-kerning: normal;
+}
+
+
+.navbar-brand {
+    font-family: "Special Gothic Expanded One", serif;
+}
+
+.nav-link {
+    font-weight: 600;
+    text-align: center;
+}
