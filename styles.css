@@ -1,10 +1,10 @@
 body {
     background: ghostwhite;
-    font-family: "Century Gothic", serif;
+    font-family: "Century Gothic", sans-serif, Arial;
 }
 
 h1 {
-    font-family: "Special Gothic Expanded One", sans-serif;
+    font-family: "Special Gothic Expanded One", sans-serif, Arial;
     text-align: center;
 }
 
@@ -20,12 +20,6 @@ nav {
     top: 0;
 }
 
-.navbar {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-}
-
 .navbar-brand {
     font-family: "Special Gothic Expanded One", serif;
     color: black;
@@ -33,7 +27,7 @@ nav {
 }
 
 .nav-item:hover {
-    color:gray;
+    color:black;
 }
 
 footer {
