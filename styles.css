@@ -20,13 +20,20 @@ nav {
     top: 0;
 }
 
-.navbar-brand {
-    font-family: "Special Gothic Expanded One", serif;
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
 }
 
-.nav-link {
-    font-weight: 600;
-    text-align: center;
+.navbar-brand {
+    font-family: "Special Gothic Expanded One", serif;
+    color: black;
+    font-weight: bold;
+}
+
+.nav-item:hover {
+    color:gray;
 }
 
 footer {
