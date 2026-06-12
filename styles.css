@@ -3,7 +3,7 @@ body {
 }
 
 main {
-    background: lightcyan;
+    background: white;
 }
 
 h1 {
@@ -24,6 +24,7 @@ h2 {
 }
 
 nav {
+    background: ghostwhite;
     position: sticky;
     top: 0;
 }
@@ -43,6 +44,7 @@ nav {
 }
 
 footer {
+    background: ghostwhite;
     color: #6c757d;
     .social-icons a {
         position: relative;

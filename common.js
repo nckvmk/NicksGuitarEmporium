@@ -1,5 +1,5 @@
-/*This script is used for linking common HTML elements across all pages, thus minimizing code repetition.
-* Common HTML elements are extracted from index.html and then inserted to the respective fields in other pages.*/
+/* This script is used for linking common HTML elements across all pages, thus minimizing code repetition.
+* Common HTML elements are extracted from index.html and then inserted to the respective fields in other pages. */
 
 // NAVIGATION BAR
 $(function() {
@@ -38,8 +38,9 @@ $(function() {
 
 // FOOTER
 $(function() {
+    // Ensure that source page is index.html
     if (window.location.pathname.includes("index.html")) return;
-    //Extract the requested elements from the source and place them in the respective fields of the destination page.
+    // Extract the footer from the source and place it in the respective field of the destination page.
     $("footer").load("index.html footer");
 });
 
