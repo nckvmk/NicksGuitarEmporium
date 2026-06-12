@@ -7,7 +7,9 @@
     <meta name="description" content="Website for small trading business of vintage guitars and amps">
     <meta name="author" content="Nikos Vamvakas">
     <title>Nick's Guitar Emporium</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-4.0.0.js"
+    integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U="
+    crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" defer integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles.css" type="text/css" href="styles.css">
@@ -30,45 +32,13 @@
         <div class="container-fluid">
             <div class="contact__wrapper shadow-lg mt-n9">
                 <div class="row no-gutters">
-                    <!-- Contact info column -->
-                    <div class="col-lg-5 contact-info__wrapper gradient-brand-color p-5 order-lg-2">
-                        <h3 class="color--white mb-4">Contact Info</h3>
-                        <ul class="contact-info__list list-style--none position-relative z-index-101">
-                            <li class="mb-4 pl-4">
-                                <span class="position-absolute"><i class="fas fa-envelope"></i></span> info@nge.com
-                            </li>
-                            <li class="mb-4 pl-4">
-                                <span class="position-absolute"><i class="fas fa-phone"></i></span> +30 210 6767 676
-                            </li>
-                            <li class="mb-4 pl-4">
-                                <span class="position-absolute">
-                                    <i class="fab fa-facebook"></i>
-                                </span> <a href="https://www.facebook.com/profile.php?id=100009706128087" aria-label="Facebook" target="_blank">Visit Our Facebook</a>
-                            </li>
-                            <li class="mb-4 pl-4">
-                                <span class="position-absolute">
-                                    <i class="fab fa-youtube"></i>
-                                </span> <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" aria-label="YouTube" target="_blank">Visit Our YouTube</a>
-                            </li>
-                            <li class="mb-4 pl-4">
-                                <span class="position-absolute"><i class="fas fa-map-marker-alt"></i></span> <strong>Nick's Guitar Emporium</strong>
-                                <br> Iroon Polytechneiou 3
-                                <br> Elefsina Attikis 19200
-                            </li>
-                        </ul>
-
-                        <div class="mapouter"><div class="gmap_canvas"><iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=548&amp;height=496&amp;hl=en&amp;q=Iroon Polytechneiou 3, elefsina&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://sprunkin.com/">Sprunki Game</a></div><style>.mapouter{position:relative;text-align:right;width:100%;height:496px;}.gmap_canvas {overflow:hidden;background:none!important;width:100%;height:496px;}.gmap_iframe {height:496px!important;}</style>
-                        </div>
-
-                    </div>
-
                     <!-- Contact Form column -->
-                    <div class="col-lg-7 contact-form__wrapper order-lg-1">
+                    <div id="contact_form" class="col-lg-7 contact-form__wrapper order-lg-1">
                         <h3 class="pt-4">Get in Touch</h3>
                         <p class="contact_form_desc" lang="en">Are you are interested in trading gear with us?
                             <br> Do you have a question about the process?
                             <br> Then feel free to shoot us up a message by filling the form below and we will try to get back to you the soonest!</p>
-                        <form action="#" class="contact-form form-validate py-4" novalidate="novalidate">
+                        <form id="contact" action="#" class="contact-form py-4" method="post">
                             <div class="row">
                                 <div class="col-sm-6 mb-3">
                                     <div class="form-group">
@@ -112,6 +82,38 @@
                             </div>
                         </form>
                     </div>
+                    <!-- Contact info column -->
+                    <div id="contact_info" class="col-lg-5 contact-info__wrapper p-5 order-lg-2">
+                        <h3 class="mb-4">Contact Info</h3>
+                        <ul class="contact-info__list list-style--none position-relative z-index-101">
+                            <li class="mb-4 pl-4">
+                                <span class="position-absolute"><i class="fas fa-envelope"></i></span> info@nge.com
+                            </li>
+                            <li class="mb-4 pl-4">
+                                <span class="position-absolute"><i class="fas fa-phone"></i></span> +30 210 6767 676
+                            </li>
+                            <li class="mb-4 pl-4">
+                                <span class="position-absolute">
+                                    <i class="fab fa-facebook"></i>
+                                </span> <a href="https://www.facebook.com/profile.php?id=100009706128087" aria-label="Facebook" target="_blank">Visit Our Facebook</a>
+                            </li>
+                            <li class="mb-4 pl-4">
+                                <span class="position-absolute">
+                                    <i class="fab fa-youtube"></i>
+                                </span> <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" aria-label="YouTube" target="_blank">Visit Our YouTube</a>
+                            </li>
+                            <li class="mb-4 pl-4">
+                                <span class="position-absolute"><i class="fas fa-map-marker-alt"></i></span> <strong>Nick's Guitar Emporium</strong>
+                                <br> Iroon Polytechneiou 3
+                                <br> Elefsina Attikis 19200
+                            </li>
+                        </ul>
+
+                        <div class="mapouter"><div class="gmap_canvas"><iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=548&amp;height=496&amp;hl=en&amp;q=Iroon Polytechneiou 3, elefsina&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://sprunkin.com/">Sprunki Game</a></div><style>.mapouter{position:relative;text-align:right;width:100%;height:496px;}.gmap_canvas {overflow:hidden;background:none!important;width:100%;height:496px;}.gmap_iframe {height:496px!important;}</style>
+                        </div>
+
+                    </div>
+
                 </div>
             </div>
         </div>
