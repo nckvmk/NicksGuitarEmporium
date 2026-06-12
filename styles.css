@@ -35,13 +35,21 @@ nav {
     color:black;
 }
 
-.social-icons a {
-    color: #6c757d;
-    font-size: 1.5rem;
-    margin: 0 10px;
-    transition: color 0.3s ease;
-}
 
-.social-icons a:hover {
-    color: #007bff;
+
+footer {
+    color: #6c757d;
+    .social-icons a {
+        position: relative;
+        justify-content: center;
+        text-align: center;
+        color: #6c757d;
+        font-size: 1.5rem;
+        margin: 0 10px;
+        transition: color 0.3s ease;
+    }
+
+    .social-icons a:hover {
+        color: #007bff;
+    }
 }
