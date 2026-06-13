@@ -20,6 +20,7 @@
     <link rel="icon" href="images/logo.ico">
     <script src="common.js" defer></script>
     <script src="carousel.js" defer></script>
+    <script src="catalog_filtering.js" defer></script>
 <body>
 <main>
     <div id="nav_placeholder" class="container-auto">
@@ -28,9 +29,18 @@
 
     <h1 class="pt-5">Browse Our Catalog</h1>
 
-    <div id="product_catalog" class="container pb-5 mt-5">
+    <div class="container mt-5">
+        <label for="filter_catalog" class="fw-bold me-2">I wish to see:</label>
+        <select id="filter_catalog" class="form-select w-auto d-inline-block">
+            <option value="all">All</option>
+            <option value="guitar">Guitars</option>
+            <option value="amp">Amps</option>
+        </select>
+    </div>
+
+    <div id="product_catalog" class="container pb-5 mt-3">
         <!--First Row-->
-        <div class="row pb-4 g-4">
+        <div class="row g-4">
             <!--Guitar 1-->
             <div class="guitar col-md-4">
                 <div class="card">
@@ -185,7 +195,7 @@
                 </div>
             </div>
         <!--Second Row-->
-        <div class="row pt-4 g-4">
+        <div class="row g-4">
             <!--Guitar 4-->
             <div class="guitar col-md-4">
                 <div class="card">
@@ -340,9 +350,9 @@
                 </div>
             </div>
         <!--Third Row-->
-        <div class="row py-4 g-4">
+        <div class="row g-4">
             <!--Guitar 6-->
-            <div class="guitar col-md-4">
+            <div class="amp col-md-4">
                 <div class="card">
                     <div id="carousel7" class="carousel slide">
                         <div class="carousel-indicators">

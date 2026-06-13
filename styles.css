@@ -139,6 +139,7 @@ textarea {
 
 .card { /* Maintain card height and push the price to bottom left corner*/
     height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     .d-flex {
