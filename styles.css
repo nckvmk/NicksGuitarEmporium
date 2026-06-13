@@ -123,9 +123,9 @@ textarea {
     border: none;
 }
 
-/* Minimized nav button size and area as to not overlap YT's player controls*/
+
 .carousel-control-prev,
-.carousel-control-next {
+.carousel-control-next { /* Minimized nav button size and area as to not overlap YT's player controls*/
     width: 5%;
     opacity: 0.7;
 }
@@ -137,9 +137,24 @@ textarea {
     background-size: 60%;
 }
 
+.card { /* Maintain card height and push the price to bottom left corner*/
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    .d-flex {
+        margin-top: auto;
+    }
+}
+
 .card-body {
-    width: 100%;
-    height: 275px !important;
+    height: 350px !important;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.card-text {
+    font-size: 15px;
 }
 
 footer {
