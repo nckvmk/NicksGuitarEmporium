@@ -101,6 +101,15 @@ textarea {
     height: 250px;
 }
 
+.carousel-item {
+    height: 535px !important;
+    overflow: hidden;
+    width: 100%;
+}
+.carousel-item img {
+    width: 100%;
+}
+
 footer {
     background: ghostwhite;
     color: #6c757d;
