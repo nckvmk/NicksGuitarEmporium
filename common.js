@@ -36,6 +36,14 @@ $(function() {
     }
 });
 
+// RECENT ITEMS
+$(function() {
+    // Ensure that source page is catalog.html
+    if (window.location.pathname.includes("catalog.html")) return;
+    // Extract the first row of items and place it in the respective field of index.html.
+    $("#product_catalog").load("catalog.html #product_catalog");
+});
+
 // FOOTER
 $(function() {
     // Ensure that source page is index.html
