@@ -26,6 +26,92 @@
         <div id="nav_placeholder" class="container-auto">
             <!--Placeholder for the navigation bar-->
         </div>
+
+        <h1 class="pt-5">Tasks</h1>
+        <h5 id="tasks_page_desc" class="pb-5">A page to post, view and edit tasks that are currently in progress, pending or completed</h5>
+
+        <section id="tasks_table" class="p-5 container-lg">
+            <div class="table-responsive">
+                <table class="table align-middle">
+                    <thead>
+                    <tr>
+                        <th scope="col">Task Name</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Due Date</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        ...
+                    </tr>
+                    <tr class="align-bottom">
+                        ...
+                    </tr>
+                    <tr>
+                        <td>...</td>
+                        <td>...</td>
+                        <td class="align-top">This cell is aligned to the top.</td>
+                        <td>...</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="tasks_form_section" class="py-5 container-fluid">
+            <div class="mt-n9 d-flex justify-content-center align-items-center">
+                <div class="row">
+                    <!-- Contact Form column -->
+                    <div id="tasks_form" class="col-lg-7 order-lg-1">
+                        <h6 class="tasks_form_desc pt-2" lang="en">To enter a new task, please use the following form</h6>
+                        <form id="tasks" action="#" class="tasks_form py-4" method="post">
+                            <div class="row">
+                                <div class="col-sm-6 mb-3">
+                                    <div class="form-group">
+                                        <label class="required-field" for="firstName">First Name</label>
+                                        <input type="text" class="form-control text-muted" id="firstName" name="firstName" placeholder="John">
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6 mb-3">
+                                    <div class="form-group">
+                                        <label for="lastName">Last Name</label>
+                                        <input type="text" class="form-control text-muted" id="lastName" name="lastName" placeholder="Doe">
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-12 mb-3">
+                                    <div class="form-group">
+                                        <label class="required-field" for="email">Email</label>
+                                        <input type="text" class="form-control text-muted" id="email" name="email" placeholder="johndoe@example.com">
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-12 mb-3">
+                                    <div class="form-group">
+                                        <label class="required-field" for="email">Subject</label>
+                                        <input type="text" class="form-control text-muted" id="subject" name="subject" placeholder="Please enter the subject of your message">
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-12 mb-3">
+                                    <div class="form-group">
+                                        <label class="required-field" for="message">Message</label>
+                                        <textarea class="form-control text-muted" id="message" name="message" rows="4" placeholder="300 characters max"></textarea>
+                                    </div>
+                                </div>
+
+                                <div id="submit" class="col-sm-12 mb-3">
+                                    <button type="submit" name="submit" class="btn btn-dark">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
     </main>
 
     <footer>

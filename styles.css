@@ -20,6 +20,10 @@ h3 {
     font-family: "Special Gothic Expanded One", sans-serif, Arial;
 }
 
+#tasks_page_desc {
+    text-align: center;
+}
+
 .special-gothic-expanded-one-regular { /* External font properties */
     font-family: "Special Gothic Expanded One", sans-serif;
     font-weight: 400;
@@ -149,7 +153,7 @@ textarea {
 }
 
 .card-body {
-    height: 500px !important;
+    height: 400px !important;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
