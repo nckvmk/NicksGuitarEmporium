@@ -38,11 +38,22 @@ $(function() {
 
 // RECENT ITEMS
 $(function() {
-    // Ensure that source page is catalog.html
-    if (window.location.pathname.includes("catalog.html")) return;
-    // Extract the first row of items and place it in the respective field of index.html.
-    $("#product_catalog").load("catalog.html #product_catalog");
-});
+    // Only run on index.html
+    if (!window.location.pathname.endsWith("index.html") &&
+        window.location.pathname !== "/" &&
+        window.location.pathname !== "") {
+        return;
+    }
+    // Load the catalog page's product container
+    $("#product_catalog").load("catalog.html #product_catalog", function() {
+        // Find the first row of cards
+        let $firstRow = $("#product_catalog .row").first();
+        // Keep only the first 3 columns (cards) in that row
+        $firstRow.find(".col").slice(3).remove();
+        // Replace the entire content with just this trimmed row
+        $("#product_catalog").empty().append($firstRow);
+    });
+})
 
 // FOOTER
 $(function() {
