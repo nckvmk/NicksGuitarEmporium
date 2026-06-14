@@ -29,9 +29,9 @@
         </div>
 
         <h1 class="pt-5">Tasks</h1>
-        <h5 id="tasks_page_desc" class="pb-5">A page to post, view and edit tasks that are currently in progress, pending or completed</h5>
+        <h5 id="tasks_page_desc" class="pb-5">A Page to View & Manage Business Tasks</h5>
 
-        <section id="table" class="p-5 container-auto">
+        <section id="table" class="p-4 container-auto">
             <div class="row">
                 <div class="col-12 px-4 d-flex justify-content-center align-items-center">
                     <table id="tasks_table" class="table">
@@ -45,31 +45,46 @@
                             <td>Test1</td>
                             <td>Testdesc</td>
                             <td>15/06/2026</td>
-                            <td><button class="btn btnDelete btn-danger">Delete</button></td>
+                            <td>
+                                <button class="btn btnEdit btn-primary">Edit</button>
+                                <button class="btn btnDelete btn-danger">Delete</button>
+                            </td>
                         </tr>
                         <tr>
                             <td>Test2</td>
                             <td>Testdesc</td>
                             <td>15/06/2026</td>
-                            <td><button class="btn btnDelete btn-danger">Delete</button></td>
+                            <td>
+                                <button class="btn btnEdit btn-primary">Edit</button>
+                                <button class="btn btnDelete btn-danger">Delete</button>
+                            </td>
                         </tr>
                         <tr>
                             <td>Test3</td>
                             <td>Testdesc</td>
                             <td>15/06/2026</td>
-                            <td><button class="btn btnDelete btn-danger">Delete</button></td>
+                            <td>
+                                <button class="btn btnEdit btn-primary">Edit</button>
+                                <button class="btn btnDelete btn-danger">Delete</button>
+                            </td>
                         </tr>
                         <tr>
                             <td>Test4</td>
                             <td>Testdesc</td>
                             <td>15/06/2026</td>
-                            <td><button class="btn btnDelete btn-danger">Delete</button></td>
+                            <td>
+                                <button class="btn btnEdit btn-primary">Edit</button>
+                                <button class="btn btnDelete btn-danger">Delete</button>
+                            </td>
                         </tr>
                         <tr>
                             <td>Test5</td>
                             <td>Testdesc</td>
                             <td>15/06/2026</td>
-                            <td><button class="btn btnDelete btn-danger">Delete</button></td>
+                            <td>
+                                <button class="btn btnEdit btn-primary">Edit</button>
+                                <button class="btn btnDelete btn-danger">Delete</button>
+                            </td>
                         </tr>
                     </table>
                 </div>
@@ -81,44 +96,27 @@
                 <div class="row">
                     <!-- Contact Form column -->
                     <div id="tasks_form" class="col-lg-7 order-lg-1">
-                        <h6 class="tasks_form_desc pt-2" lang="en">To enter a new task, please use the following form</h6>
+                        <h5 class="tasks_form_desc pt-2" lang="en">To enter a new task, please use the following form:</h5>
                         <form id="tasks" action="#" class="tasks_form py-4" method="post">
                             <div class="row">
-                                <div class="col-sm-6 mb-3">
-                                    <div class="form-group">
-                                        <label class="required-field" for="firstName">First Name</label>
-                                        <input type="text" class="form-control text-muted" id="firstName" name="firstName" placeholder="John">
-                                    </div>
-                                </div>
-
-                                <div class="col-sm-6 mb-3">
-                                    <div class="form-group">
-                                        <label for="lastName">Last Name</label>
-                                        <input type="text" class="form-control text-muted" id="lastName" name="lastName" placeholder="Doe">
-                                    </div>
-                                </div>
-
                                 <div class="col-sm-12 mb-3">
                                     <div class="form-group">
-                                        <label class="required-field" for="email">Email</label>
-                                        <input type="text" class="form-control text-muted" id="email" name="email" placeholder="johndoe@example.com">
+                                        <label class="required-field" for="name">Task Name</label>
+                                        <input type="text" class="form-control text-muted" id="name" name="name" placeholder="Enter task name">
                                     </div>
                                 </div>
-
                                 <div class="col-sm-12 mb-3">
                                     <div class="form-group">
-                                        <label class="required-field" for="email">Subject</label>
-                                        <input type="text" class="form-control text-muted" id="subject" name="subject" placeholder="Please enter the subject of your message">
+                                        <label class="required-field" for="description">Task Description</label>
+                                        <input type="text" class="form-control text-muted" id="description" name="description" placeholder="Describe the task in short">
                                     </div>
                                 </div>
-
                                 <div class="col-sm-12 mb-3">
                                     <div class="form-group">
-                                        <label class="required-field" for="message">Message</label>
-                                        <textarea class="form-control text-muted" id="message" name="message" rows="4" placeholder="300 characters max"></textarea>
+                                        <label class="required-field" for="deadline">Due Date</label>
+                                        <input type="date" class="form-control text-muted" id="deadline" name="deadline">
                                     </div>
                                 </div>
-
                                 <div id="submit" class="col-sm-12 mb-3">
                                     <button type="submit" name="submit" class="btn btn-dark">Submit</button>
                                 </div>
