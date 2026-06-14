@@ -105,9 +105,17 @@ textarea {
     height: 250px;
 }
 
+#testimonials {
+    text-align: center;
+}
+
 /* Resizing for carousel images and videos to fit neatly */
 .carousel-item {
     height: 500px;
+}
+
+#about-carousel .carousel-item {
+    height: 800px;
 }
 
 .carousel-item img {
