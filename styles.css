@@ -149,13 +149,14 @@ textarea {
 }
 
 .card-body {
-    height: 350px !important;
+    height: 500px !important;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
 }
 
 .card-text {
+    padding-top: 1rem !important;
     font-size: 15px;
 }
 
