@@ -137,7 +137,8 @@ textarea {
     background-size: 60%;
 }
 
-.card { /* Maintain card height and push the price to bottom left corner*/
+
+.card { /* Maintain card height and push the price to bottom left corner */
     height: 100%;
     width: 100%;
     display: flex;
