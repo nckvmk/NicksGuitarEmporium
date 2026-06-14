@@ -19,6 +19,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link rel="icon" href="images/logo.ico">
     <script src="common.js" defer></script>
+    <script src="tasks.js" defer></script>
 </head>
 
 <body>
@@ -30,36 +31,53 @@
         <h1 class="pt-5">Tasks</h1>
         <h5 id="tasks_page_desc" class="pb-5">A page to post, view and edit tasks that are currently in progress, pending or completed</h5>
 
-        <section id="tasks_table" class="p-5 container-lg">
-            <div class="table-responsive">
-                <table class="table align-middle">
-                    <thead>
-                    <tr>
-                        <th scope="col">Task Name</th>
-                        <th scope="col">Description</th>
-                        <th scope="col">Due Date</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        ...
-                    </tr>
-                    <tr class="align-bottom">
-                        ...
-                    </tr>
-                    <tr>
-                        <td>...</td>
-                        <td>...</td>
-                        <td class="align-top">This cell is aligned to the top.</td>
-                        <td>...</td>
-                    </tr>
-                    </tbody>
-                </table>
+        <section id="table" class="p-5 container-auto">
+            <div class="row">
+                <div class="col-12 px-4 d-flex justify-content-center align-items-center">
+                    <table id="tasks_table" class="table">
+                        <tr>
+                            <th>Task</th>
+                            <th>Description</th>
+                            <th>Due Date</th>
+                            <th>Action</th>
+                        </tr>
+                        <tr>
+                            <td>Test1</td>
+                            <td>Testdesc</td>
+                            <td>15/06/2026</td>
+                            <td><button class="btn btnDelete btn-danger">Delete</button></td>
+                        </tr>
+                        <tr>
+                            <td>Test2</td>
+                            <td>Testdesc</td>
+                            <td>15/06/2026</td>
+                            <td><button class="btn btnDelete btn-danger">Delete</button></td>
+                        </tr>
+                        <tr>
+                            <td>Test3</td>
+                            <td>Testdesc</td>
+                            <td>15/06/2026</td>
+                            <td><button class="btn btnDelete btn-danger">Delete</button></td>
+                        </tr>
+                        <tr>
+                            <td>Test4</td>
+                            <td>Testdesc</td>
+                            <td>15/06/2026</td>
+                            <td><button class="btn btnDelete btn-danger">Delete</button></td>
+                        </tr>
+                        <tr>
+                            <td>Test5</td>
+                            <td>Testdesc</td>
+                            <td>15/06/2026</td>
+                            <td><button class="btn btnDelete btn-danger">Delete</button></td>
+                        </tr>
+                    </table>
+                </div>
             </div>
         </section>
 
         <section id="tasks_form_section" class="py-5 container-fluid">
-            <div class="mt-n9 d-flex justify-content-center align-items-center">
+            <div class="d-flex justify-content-center align-items-center">
                 <div class="row">
                     <!-- Contact Form column -->
                     <div id="tasks_form" class="col-lg-7 order-lg-1">
