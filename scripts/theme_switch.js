@@ -1,26 +1,26 @@
 //This script serves the purpose of making the theme switch button on the nav bar functional for the user to switch themes dynamically
 
-let darkmode = localStorage.getItem('dark-mode');
-const themeSwitch = document.querySelector('#theme-switch');
-
-const enableDarkmode = () => {
-    document.body.classList.add('dark-mode');
-    localStorage.setItem('dark-mode', 'active');
-}
-
-const disableDarkmode = () => {
-    document.body.classList.remove('dark-mode');
-    localStorage.setItem('dark-mode', null);
-}
-
-if(darkmode === "active") enableDarkmode();
-
-themeSwitch.addEventListener("click", () => {
-    if(darkmode !== "active") {
-        darkmode = localStorage.getItem('dark-mode');
-        enableDarkmode()
+$(document).ready(function() {
+    function updateTheme() {
+        const isDark = localStorage.getItem('dark-mode') === 'active';
+        if (isDark) {
+            $('body').addClass('dark-mode');
+            $('#theme-switch').html('#light');
+        } else {
+            $('body').removeClass('dark-mode');
+            $('#theme-switch').html('#dark');
+        }
     }
-    else {
-        disableDarkmode()
-    }
-})
+
+    updateTheme();
+    
+    $(document).on('click', '#theme-switch', function() {
+        const isDark = localStorage.getItem('dark-mode') === 'active';
+        if (isDark) {
+            localStorage.setItem('dark-mode', null);
+        } else {
+            localStorage.setItem('dark-mode', 'active');
+        }
+        updateTheme();
+    });
+});
