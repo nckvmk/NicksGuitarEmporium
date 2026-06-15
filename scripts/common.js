@@ -11,13 +11,13 @@ $(function() {
             currentPage = "index.html";
         }
 
-        // Loop through all nav links and add 'active fw-bold' to matching href
+        // Loop through all nav links and add 'active' to matching href
         $("#nav_placeholder .nav-link").each(function() {
             let linkHref = $(this).attr("href");
             if (linkHref === currentPage) {
-                $(this).addClass("active fw-bold").attr("aria-current", "page");
+                $(this).addClass("active").attr("aria-current", "page");
             } else {
-                $(this).removeClass("active fw-bold").removeAttr("aria-current");
+                $(this).removeClass("active").removeAttr("aria-current");
             }
         });
     }
