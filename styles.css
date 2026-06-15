@@ -16,10 +16,15 @@
 
 html, body {
     font-family: "Century Gothic", sans-serif, Arial;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 main {
     background: var(--base-color);
+    flex: 1;
 }
 
 h1 {
@@ -88,12 +93,48 @@ a {
     color: var(--text-color);
 }
 
+.nav-link.active {
+    color: var(--text-color) !important;
+    font-weight: bold;
+}
+
+
+.material-symbols-outlined { /*Theme mode icon*/
+     font-variation-settings:
+             'FILL' 0,
+             'wght' 400,
+             'GRAD' 0,
+             'opsz' 24
+}
+
 label {
     color: var(--text-color);
 }
 
-select {
+select, #filter_catalog {
     background-color: var(--base-variant);
+    color: var(--text-color);
+    border: 1px solid #ced4da; /* optional, keeps border subtle */
+}
+
+select option {
+    background-color: var(--base-variant);
+    color: var(--text-color);
+}
+
+.table, .table th, .table td {
+    background-color: var(--base-variant);
+    color: var(--text-color);
+}
+
+input, textarea, .form-control, .form-control.text-muted {
+    background-color: var(--base-variant);
+    color: var(--text-color);
+    border: 1px solid #ced4da;
+}
+
+.form-control.text-muted::placeholder {
+    color: var(--text-color);
 }
 
 #contact_info {
@@ -161,6 +202,16 @@ textarea {
 /* Resizing for carousel images and videos to fit neatly */
 .carousel-item {
     height: 500px;
+}
+
+.carousel-name {
+    font-weight: bold;
+    color: white;
+}
+
+.carousel-info {
+    font-weight: bold;
+    color: white;
 }
 
 #about-carousel .carousel-item {
@@ -234,6 +285,8 @@ textarea {
 footer {
     background: var(--base-variant);
     color: var(--base-footer);
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
     .social-icons a {
         position: relative;
         justify-content: center;
