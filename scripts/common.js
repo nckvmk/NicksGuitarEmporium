@@ -27,11 +27,19 @@ $(function() {
         window.location.pathname === "/" ||
         window.location.pathname === "") {
         setActiveNavLink();
+        // After navbar is loaded, refresh the theme button icon
+        if (typeof refreshThemeButton === 'function') {
+            refreshThemeButton();
+        }
     }
     else {
         // For other pages: load navbar from index.html, then update active class
         $("#nav_placeholder").load("index.html #nav_placeholder", function() {
             setActiveNavLink();
+            // After navbar is loaded, refresh the theme button icon
+            if (typeof refreshThemeButton === 'function') {
+                refreshThemeButton();
+            }
         });
     }
 });
