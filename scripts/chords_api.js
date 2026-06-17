@@ -55,9 +55,17 @@ $(document).ready(function() {
         clearErrors();
 
         if (validateForm()) {
-            // For now, just show the chord name
+            // Extract the user's input
             let chordName = $("#chord-name").val().trim();
-            alert("Searching for chord: " + chordName);
+
+            // Create the API tag with the user's input
+            let apiTag = $("<ins>")
+                .addClass("scales_chords_api")
+                .attr("chord", chordName);
+
+            // Append the tag to api-content div
+            $("#api-content").append(apiTag);
+
             // Optionally reset the form
             this.reset();
             $(".form-control, input, textarea").css("border", "");
