@@ -1,8 +1,8 @@
 //This script is designed to take the input from the user and call the API to fetch the requested chord
 
 $(document).ready(function() {
-    // Custom validation method for names (letters, spaces, 2-15 chars)
-    $.validator?.addMethod ? null : function(){}; // not using jQuery Validation plugin, manual approach
+    // Custom validation method for chord name
+    $.validator?.addMethod ? null : function(){}; //not using jQuery Validation plugin, manual approach
 
     // Helper: Show error under a field
     function showError(fieldId, message) {
@@ -32,13 +32,17 @@ $(document).ready(function() {
     // Validation logic
     function validateForm() {
         let isValid = true;
+        let chordName = $("#chord-name").val().trim();
 
-        let chordName = $("chord-name").val().trim();
-        if (chordName == "" === "") {
-            showError("chord-name", "Input is required.");
+        if (chordName === "") {
+            showError("#chord-name", "Chord name is required.");
+            isValid = false;
+        } else if (/^[0-9]+$/.test(chordName)) {
+            // Check if the input contains only numbers
+            showError("#chord-name", "Chord name cannot be only numbers.");
             isValid = false;
         } else if (chordName.length > 6) {
-            showError("chord-name", "Chord name must not exceed 5 characters.");
+            showError("#chord-name", "Chord name must not exceed 6 characters.");
             isValid = false;
         }
 
@@ -46,17 +50,23 @@ $(document).ready(function() {
     }
 
     // On form submit
-    $("#chord").on("search", function(e) {
-        e.preventDefault();  // stop actual form submission
-        clearErrors();       // remove previous errors and red borders
+    $("#chord").on("submit", function(e) {
+        e.preventDefault();
+        clearErrors();
 
         if (validateForm()) {
-            // Success
-            alert("The form has been submitted successfully. Thank you for reaching out ;)");
+            // For now, just show the chord name
+            let chordName = $("#chord-name").val().trim();
+            alert("Searching for chord: " + chordName);
             // Optionally reset the form
             this.reset();
-            // Remove any remaining error styles
             $(".form-control, input, textarea").css("border", "");
         }
     });
-})
+
+    // Clear error on typing (better UX)
+    $("#chord-name").on("input", function() {
+        $(this).css("border", "");
+        $("#chord-name_error").remove();
+    });
+});
