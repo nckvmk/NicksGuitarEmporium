@@ -19,6 +19,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link rel="icon" href="images/logo.ico">
     <script async type="text/javascript" src="https://www.scales-chords.com/api/scales-chords-api.js"></script>
+    <script src="scripts/chords_api.js" defer></script>
     <script src="scripts/theme_switch.js" defer></script>
     <script src="scripts/common.js" defer></script>
 </head>
@@ -78,8 +79,12 @@
         <section id="api" class="py-2 container-fluid">
             <h2 class="pb-2">Find a Chord</h2>
             <div id="api-content" class="api_content d-flex justify-content-center align-items-center">
-                <input type="text" class="chord_name mx-2" placeholder="Enter the chord name here">
-                <button type="submit" name="search" class="btn btn-dark">Search</button>
+                <form id="chord" action="#" class="chord-form" method="post">
+                    <div class="form-group">
+                        <input type="text" class="form-control text-muted" id="chord-name" placeholder="Enter the chord name here">
+                        <button type="submit" name="search" class="btn btn-dark">Search</button>
+                    </div>
+                </form>
             </div>
         </section>
 
@@ -119,7 +124,7 @@
                 <img src="images/footer_logo.png" class="img-fluid" alt="Small logo for the footer.">
             </span>
         </div>
-        <p id="copyright"class="text-center" lang="en">© 2026 Nick's Guitar Emporium</p>
+        <p id="copyright" class="text-center" lang="en">© 2026 Nick's Guitar Emporium</p>
         <p id="footer_contact" class="text-center " lang="en">Tel: +30 210 6767 676  |  E-mail: info@nge.com</p>
     </div>
 </footer>
