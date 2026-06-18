@@ -100,6 +100,23 @@ $(document).ready(function() {
         renderTable();
     }
 
+    // Edit (using prompt for simplicity)
+    function editTask(id) {
+        let task = tasks.find(t => t.id === id);
+        if (!task) return;
+        let newName = prompt('Task Name:', task.name);
+        if (newName === null) return;
+        let newDesc = prompt('Description:', task.description);
+        if (newDesc === null) return;
+        let newDate = prompt('Due Date (YYYY-MM-DD):', task.dueDate);
+        if (newDate === null) return;
+        task.name = newName || task.name;
+        task.description = newDesc || task.description;
+        task.dueDate = newDate || task.dueDate;
+        saveTasks(tasks);
+        renderTable();
+    }
+
     // Form submit
     $('#tasks').on('submit', function(e) {
         e.preventDefault();
