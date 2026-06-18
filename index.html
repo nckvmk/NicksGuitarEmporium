@@ -18,8 +18,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link rel="icon" href="images/logo.ico">
-    <script async type="text/javascript" src="https://www.scales-chords.com/api/scales-chords-api.js"></script>
-    <script src="scripts/chords_api.js" defer></script>
+    <script src="scripts/music_trivia_api.js" defer></script>
     <script src="scripts/theme_switch.js" defer></script>
     <script src="scripts/common.js" defer></script>
 </head>
@@ -77,14 +76,11 @@
         </section>
 
         <section id="api" class="py-2 container-fluid">
-            <h2 class="pb-2">Find a Chord</h2>
-            <div id="api-content" class="api_content d-flex justify-content-center">
-                <form id="chord" action="#" class="chord-form" method="post">
-                    <div class="form-group py-2">
-                        <input type="text" class="form-control text-muted" id="chord-name" placeholder="Enter the chord name here">
-                    </div>
-                    <button type="submit" name="submit" class="btn btn-dark">Search</button>
-                </form>
+            <h2 class="pb-2">Music Trivia</h2>
+            <div id="api-content" class="api_content d-flex flex-column justify-content-center align-items-center">
+                <div id="api-output" class="mt-2" style="width: 100%;">
+                    <!-- Music trivia API placeholder -->
+                </div>
             </div>
         </section>
 
