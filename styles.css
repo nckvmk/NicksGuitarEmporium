@@ -44,6 +44,12 @@ h3 {
     color: var(--text-color);
 }
 
+#trust {
+    h3 {
+        text-align: center;
+    }
+}
+
 h5 {
     color: var(--text-color);
 }
@@ -230,13 +236,15 @@ textarea {
 }
 
 .carousel-name {
-    font-weight: bold;
-    color: white;
+    font-family: "Special Gothic Expanded One", sans-serif, Arial;
+    color: yellow;
+    text-shadow: black 2px 2px 2px;
 }
 
 .carousel-info {
-    font-weight: bold;
     color: white;
+    background-color: black;
+    opacity: 0.8;
 }
 
 #about-carousel .carousel-item {
@@ -273,7 +281,6 @@ textarea {
     height: 2rem;
     background-size: 60%;
 }
-
 
 .card { /* Maintain card height and push the price to bottom left corner */
     height: 100%;
