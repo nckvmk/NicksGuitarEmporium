@@ -86,6 +86,20 @@ $(document).ready(function() {
         renderTable();
     }
 
+    // Delete
+    function deleteTask(id) {
+        tasks = tasks.filter(t => t.id !== id);
+        saveTasks(tasks);
+        renderTable();
+    }
+
+    // Complete
+    function completeTask(id) {
+        tasks.forEach(t => { if (t.id === id) t.status = 'Completed'; });
+        saveTasks(tasks);
+        renderTable();
+    }
+
     // Form submit
     $('#tasks').on('submit', function(e) {
         e.preventDefault();
