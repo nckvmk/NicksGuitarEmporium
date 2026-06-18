@@ -4,10 +4,7 @@ $(document).ready(function() {
     // Load tasks from CSV or use default
     function loadTasks() {
         let csv = localStorage.getItem('tasks');
-        if (!csv) {
-            // Default demo task (CSV format)
-            return [{ id: 1, name: "Test1", description: "Testdesc", dueDate: "2026-06-15", status: "Pending" }];
-        }
+
         // Parse CSV: first line is header, rest are rows
         let lines = csv.split('\n');
         let headers = lines[0].split(',');
@@ -68,12 +65,25 @@ $(document).ready(function() {
                     <td>
                         <button class="btn btnEdit btn-primary btn-sm" data-id="${task.id}">Edit</button>
                         <button class="btn btnDelete btn-danger btn-sm" data-id="${task.id}">Delete</button>
-                        <button class="btn btnComplete btn-success btn-sm" data-id="${task.id}">Complete</button>
+                        <button class="btn btnComplete btn-success btn-sm" data-id="${task.id}">Mark as Complete</button>
                     </td>
                 </tr>
             `;
             $tbody.append(row);
         });
+    }
+
+    // Add task
+    function addTask(name, description, dueDate) {
+        tasks.push({
+            id: getNextId(),
+            name: name,
+            description: description,
+            dueDate: dueDate,
+            status: 'Pending'
+        });
+        saveTasks(tasks);
+        renderTable();
     }
 
     // Form submit
