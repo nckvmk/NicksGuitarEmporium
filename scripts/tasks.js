@@ -256,19 +256,18 @@ $(document).ready(function() {
      * status - 'all', 'Pending', or 'Completed'
      */
     function filterTasks(status) {
-        // Get all the rows inside the table body
         let $rows = $('#tasks_table tbody tr');
-
+        console.log('Filtering for:', status);
         if (status === 'all') {
-            // Show every row
             $rows.show();
         } else {
-            // Loop through each row and toggle visibility
             $rows.each(function() {
-                // The status is in the 4th column (index 3)
                 let rowStatus = $(this).find('td:nth-child(4)').text().trim();
-                // Show only if the row's status matches the filter
-                $(this).toggle(rowStatus === status);
+                if (rowStatus === status) {
+                    $(this).show();
+                } else {
+                    $(this).hide();
+                }
             });
         }
     }
