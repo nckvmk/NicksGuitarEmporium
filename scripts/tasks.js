@@ -24,7 +24,7 @@ $(document).ready(function() {
 
     // Save tasks as CSV
     function saveTasks(tasks) {
-        if (tasks.length === 0) {
+        if (tasks.length === 0) { // Make a new entry in the csv
             localStorage.setItem('tasks', 'id,name,description,dueDate,status');
             return;
         }
@@ -42,6 +42,7 @@ $(document).ready(function() {
     // Generate new ID
     function getNextId() {
         let maxId = 0;
+        // Push maxId by 1 each time a new ID is generated
         tasks.forEach(t => { if (t.id > maxId) maxId = t.id; });
         return maxId + 1;
     }
@@ -50,10 +51,12 @@ $(document).ready(function() {
     function renderTable() {
         let $tbody = $('#tasks_table tbody');
         $tbody.empty();
+        // Case of empty table
         if (tasks.length === 0) {
             $tbody.html('<tr><td colspan="5" class="text-center">No tasks yet.</td></tr>');
             return;
         }
+        // Create rows and buttons for each entry
         tasks.forEach(task => {
             let statusClass = task.status === 'Completed' ? 'text-success' : 'text-warning';
             let row = `
@@ -75,6 +78,7 @@ $(document).ready(function() {
 
     // Add task
     function addTask(name, description, dueDate) {
+        // Take input from the form and call the appropriate functions to store them into localStorage, then re-render table
         tasks.push({
             id: getNextId(),
             name: name,
@@ -102,6 +106,7 @@ $(document).ready(function() {
 
     // Edit (using prompt for simplicity)
     function editTask(id) {
+        // Fetch task by ID
         let task = tasks.find(t => t.id === id);
         if (!task) return;
         let newName = prompt('Task Name:', task.name);
@@ -115,6 +120,29 @@ $(document).ready(function() {
         task.dueDate = newDate || task.dueDate;
         saveTasks(tasks);
         renderTable();
+    }
+
+    // Filter dropdown button event
+    $('#filterStatus').on('change', function() {
+        let status = $(this).val();
+        filterTasks(status);
+    });
+
+    // Filter tasks by status
+    function filterTasks(status) {
+        let $rows = $('#tasks_table tbody tr');
+        if (status === 'all') { // Display All
+            $rows.show();
+        } else {
+            $rows.each(function() {
+                let rowStatus = $(this).find('td:nth-child(4)').text().trim(); // Extract the status only
+                if (rowStatus === status) {
+                    $(this).show(); // Display only tasks with selected status
+                } else {
+                    $(this).hide(); // Hide other entries
+                }
+            });
+        }
     }
 
     // Form submit
