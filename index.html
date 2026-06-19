@@ -21,6 +21,7 @@
     <script src="scripts/music_trivia_api.js" defer></script>
     <script src="scripts/theme_switch.js" defer></script>
     <script src="scripts/common.js" defer></script>
+    <script src="scripts/activity.js" defer></script>
 </head>
 
 <body>
@@ -68,20 +69,26 @@
 
         <section id="latest_activity" class="py-2 container-lg border-bottom">
             <h2 class="pb-2">Latest Activity</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sollicitudin, urna quis interdum ultricies, felis velit tristique est, a imperdiet eros urna id justo.</p>
+            <div id="activity-feed" class="d-flex flex-wrap justify-content-center">
+                <!-- Activities will be rendered here by JavaScript -->
+                <p class="text-muted">Loading activities...</p>
+            </div>
         </section>
 
-        <section id="recent_items" class="py-2 container-fluid">
+        <section id="recent_items" class="py-3 container-fluid">
             <h2 class="pb-2">Just In</h2>
             <div id="product_catalog" class="container pb-5">
                 <!--Placeholder for recent items (first row of items from catalog.html)-->
+            </div>
+            <div id="more" class="container-lg py-3 border-bottom pb-3 d-flex justify-content-center align-items-center">
+                <a class="btn btn-primary" href="catalog.html" role="button">Show more...</a>
             </div>
         </section>
 
         <section id="api" class="py-2 container-fluid">
             <h2 class="pb-2">Music Trivia</h2>
             <div id="api-content" class="api_content d-flex flex-column justify-content-center align-items-center">
-                <div id="api-output" class="mt-2" style="width: 100%;">
+                <div id="api-output" class="pb-4 mt-2" style="width: 100%;">
                     <!-- Music trivia API placeholder -->
                 </div>
             </div>

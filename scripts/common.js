@@ -53,10 +53,29 @@ $(function() {
         return;
     }
     // Load the catalog page's product container
+    $("#latest_activity_container").load("tasks.html #tasks_table", function() {
+        // Find the first row of cards
+        let $firstRow = $("#product_catalog .row").first();
+        // Keep only the first 3 cards in that row
+        $firstRow.find(".col").slice(3).remove();
+        // Replace the entire content with just this trimmed row
+        $("#product_catalog").empty().append($firstRow);
+    });
+})
+
+// RECENT ITEMS
+$(function() {
+    // Only run on index.html
+    if (!window.location.pathname.endsWith("index.html") &&
+        window.location.pathname !== "/" &&
+        window.location.pathname !== "") {
+        return;
+    }
+    // Load the catalog page's product container
     $("#product_catalog").load("catalog.html #product_catalog", function() {
         // Find the first row of cards
         let $firstRow = $("#product_catalog .row").first();
-        // Keep only the first 3 columns (cards) in that row
+        // Keep only the first 3 cards in that row
         $firstRow.find(".col").slice(3).remove();
         // Replace the entire content with just this trimmed row
         $("#product_catalog").empty().append($firstRow);

@@ -38,8 +38,8 @@
             <!--Filter dropdown-->
             <div class="d-flex justify-content-between align-items-center mb-3">
                 <div>
-                    <label for="filterStatus" class="fw-bold me-2">Filter tasks by status:</label>
-                    <select id="filterStatus" class="form-select w-auto d-inline-block">
+                    <label for="filterTable" class="fw-bold me-2">Filter tasks by status:</label>
+                    <select id="filterTable" class="form-select w-auto d-inline-block">
                         <option value="all">All</option>
                         <option value="Pending">Pending</option>
                         <option value="Completed">Completed</option>
@@ -51,26 +51,26 @@
                     <!--Table-->
                     <table id="tasks_table" class="table">
                         <thead>
-                        <tr>
-                            <th>
-                                Task
-                                <button id="sortName" class="btn btn-sm btn-outline-secondary ms-1" title="Sort by task name">
-                                    <span id="sortNameIcon">⇅</span>
-                                </button>
-                            </th>
-                            <th>Description</th>
-                            <th>
-                                Due Date
-                                <button id="sortDate" class="btn btn-sm btn-outline-secondary ms-1" title="Sort by due date">
-                                    <span id="sortDateIcon">⇅</span>
-                                </button>
-                            </th>
-                            <th>Status</th>
-                            <th>Action</th>
-                        </tr>
-                        </thead>
+                            <tr>
+                                <th>
+                                    Task
+                                    <button id="sortName" class="btn btn-sm btn-outline-secondary ms-1" title="Sort by task name">
+                                        <span id="sortNameIcon">⇅</span>
+                                    </button>
+                                </th>
+                                <th>Description</th>
+                                <th>
+                                    Due Date
+                                    <button id="sortDate" class="btn btn-sm btn-outline-secondary ms-1" title="Sort by due date">
+                                        <span id="sortDateIcon">⇅</span>
+                                    </button>
+                                </th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                            </thead>
                         <tbody>
-                        <!-- Tasks will be inserted here dynamically -->
+                            <!-- Tasks will be inserted here dynamically -->
                         </tbody>
                     </table>
                 </div>
