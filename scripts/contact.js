@@ -2,7 +2,6 @@
 
 $(document).ready(function() {
     // Custom validation method for names (letters, spaces, 2-15 chars)
-    $.validator?.addMethod ? null : function(){}; // not using jQuery Validation plugin, manual approach
 
     // Helper: Show error under a field
     function showError(fieldId, message) {
