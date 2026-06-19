@@ -298,7 +298,7 @@ textarea {
 }
 
 .card-body {
-    height: 450px !important;
+    height: 475px !important;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
