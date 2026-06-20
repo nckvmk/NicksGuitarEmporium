@@ -65,10 +65,10 @@ $(document).ready(function() {
             // Choose an appropriate emoji icon for the action type
             let icon = '';
             switch (act.action) {
-                case 'Added':      icon = '➕'; break;
-                case 'Edited':     icon = '✏️'; break;
-                case 'Deleted':    icon = '🗑️'; break;
-                case 'Completed':  icon = '✅'; break;
+                case 'Added':      break;
+                case 'Edited':     break;
+                case 'Deleted':    break;
+                case 'Completed':  break;
                 default:           icon = '📌';
             }
 

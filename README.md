@@ -108,7 +108,67 @@ Activities attributes: timestamp,action,taskName,details<br>
 
 4.3. Data Flow<br>
 The data flow goes as follows:<br><br>
-USer action -> Javascript logic -> Update tasks array -> Save as CSV to localStorage -> Re-render table -> Update activity log CSV -> Dashboard sync
+User action -> Javascript logic -> Update tasks array -> Save as CSV to localStorage -> Re-render table -> Update activity log CSV -> Dashboard sync<br>
+<br>
+<br>-----------------------------------------------------------------------------------------------------------
+
+**5. Activity Logging**<br>
+
+5.1. Purpose<br>
+The activity log provides an audit-trail of all task-related actions, enabling business users to track who performed which action, monitor task progress over time and review history for accountability.<br>
+
+5.2. Logged Actions<br>
+
+| Action    | Trigger               | Logged Details       |
+|-----------|-----------------------|----------------------|
+| Added     | Form submission       | Task name, due date  |
+| Edited    | Edit confirmation     | Old name -> New name |
+| Deleted   | Delete confirmation   | Task name            |
+| Completed | Complete confirmation | Task name            |
+
+
+
+5.3. Storage<br>
+In regards to the storing logic, there is a separate CSV key in localStorage for activities. The storage is limited to last 20 entries to prevent bloat. A timestamp is generated at the moment of action.
+<br>
+<br>
+<br>-----------------------------------------------------------------------------------------------------------
+
+**6. Home Page Integration (Dashboard)**<br>
+
+6.1. Latest Activity Feed<br>
+The latest activity feed, located on index.html, reads the activities CSV from localStorage and displays most recent actions first in reverse chronological order. <br>
+
+6.2. Task Statistics Dashboard<br>
+The statistics section of the dashboard shows the number of Pending and Completed tasks. It visualizes the percentage of each task's status using a progress bar. The progress bar updates automatically when tasks are modified. A total task count is displayed underneath the progress bar.
+
+6.3. Data Sync<br>
+All features read and write from the same localStorage keys and changes made on tasks.html are immediately visible on index.html. Therefore, no backend, no API and no page refresh is required since the scripts do it all.
+<br>
+<br>
+<br>-----------------------------------------------------------------------------------------------------------
+
+**7. Technical Implementation Highlights**<br>
+
+7.1. jQuery Usage<br>
+jQuery has been chosen over traditional Javascript for DOM manipulation (adding/removing table rows, updating attributes) and event handling (form submission, button clicks and dropdown changes).<br>
+
+7.2. No Page Reloads<br>
+All CRUD operations are performed via the scripts without refreshing the page. This coding decision provides instant feedback to the user, better user experience as well as consistent state management.
+
+7.3. CSV parsing<br>
+Custom functions convert between CSV strings and JavaScript arrays, avoiding external libraries and keeping the code lightweight.
+
+7.4. Error Handling<br>
+The add form has input validation that prevents the user from entering blank entries. Confirmation prompts are placed for destructive actions like delete or changing the task status. Finally, there is a default demo task for graceful fallback if localStorage is empty.
+<br>
+<br>
+<br>-----------------------------------------------------------------------------------------------------------
+
+
+
+
+
 
 
 
