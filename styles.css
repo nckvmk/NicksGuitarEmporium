@@ -226,6 +226,16 @@ textarea {
     height: 250px;
 }
 
+#activity {
+    background: var(--base-variant);
+    .badge{
+        color: var(--text-color);
+    }
+    #latest_info{
+        color: var(--text-color);
+    }
+}
+
 #testimonials {
     text-align: center;
 }

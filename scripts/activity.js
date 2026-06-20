@@ -74,14 +74,14 @@ $(document).ready(function() {
 
             // Build the list item with Bootstrap classes
             html += `
-                <li class="list-group-item d-flex justify-content-between align-items-start">
-                    <div>
+                <li id="activity" class="list-group-item d-flex justify-content-between align-items-start">
+                    <div id="latest_info">
                         <span>${icon}</span>
                         <strong>${act.action}</strong> task
                         <span class="fw-bold">“${act.taskName}”</span>
-                        ${act.details ? '<span class="text-muted small">' + act.details + '</span>' : ''}
+                        ${act.details ? '<span class="small">' + act.details + '</span>' : ''}
                     </div>
-                    <span class="badge bg-secondary rounded-pill">${act.timestamp}</span>
+                    <span class="badge rounded-pill">${act.timestamp}</span>
                 </li>
             `;
         });
