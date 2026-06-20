@@ -162,12 +162,9 @@ Custom functions convert between CSV strings and JavaScript arrays, avoiding ext
 
 7.4. Error Handling<br>
 The add form has input validation that prevents the user from entering blank entries. Confirmation prompts are placed for destructive actions like delete or changing the task status. Finally, there is a default demo task for graceful fallback if localStorage is empty.
-<br>
-<br>
-<br>
+
 ==============================================================
-<br>
-<br>
+
 
 **PART B: THE STORE CATALOG (MY PERSONAL PAGE)**<br><br>
 
@@ -220,6 +217,7 @@ Each product card has a class that identifies its category:<br>
 |----------|--------|--------------------|
 | Guitars  | guitar | class="guitar col" |
 | Amps     | amp    | class="amp col"    |
+<br>
 This class is used by the filter script to show/hide items based on user selection.<br><br>
 
 
