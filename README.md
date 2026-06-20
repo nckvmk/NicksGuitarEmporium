@@ -241,6 +241,59 @@ Therefore, the catalog serves as a virtual showroom that encourages customers to
 <br>
 <br>-----------------------------------------------------------------------------------------------------------
 
+**3. Home Page Integration<br>**
+
+3.1. Automatic Extraction<br>
+The home page (index.html) automatically displays the first row of catalog items as "Just In" products. This is handled by common.js.
+How it works:
+<br>
+a. The script checks if the current page is index.html<br>
+b. It load the entire #product_catalgo form catalog.html via AJAX<br>
+c. It selects only the first row of products.<br>
+d. It keeps only the first three cards in that row<br>
+e. It replaces the home page's placeholder with these items<br><br>
+The benefits of this approach is that it minimizes code duplication, it enables automatic updates applied to both pages at once and ensures consistent experience. Using the same logic, common elements such as the navbar and the footer are inherited from index.html and applied not only to catalog.html, but all the other pages as well.<br><br>
+
+3.2. "Show More" Button<br>
+A "Show More" button links from the home page to the full catalog, thus guiding users to explore the complete inventory.
+<br>
+<br>-----------------------------------------------------------------------------------------------------------
+
+**4. User Experience Features<br>**
+
+4.1. Responsive Design<br>
+The catalog grid uses Bootstrap's responsive classes:
+<br>
+a. 1 column on mobile (row-cols-1)<br>
+b. 2 columns on tablets (row-cols-md-2)<br>
+c. 3 columns on desktops (row-cols-lg-3)<br><br>
+d. It keeps only the first three cards in that row<br>
+This approach ensures that the catalog is usable on nay device.<br><br>
+
+4.2. Visual Consistency<br>
+All cards have the same height using flex-box. Descriptions are truncated visually with overflow: hidden, which is handled by the card's body. Finally, prices are anchored to the bottom of each card.<br>
+
+4.3. Carousel Controls<br>
+Carousel control buttons have been minimised to avoid overlapping the YouTube player controls. The controls also include index bars that the user can click and instantly switch to the respsective slide.<br>
+<br>
+<br>-----------------------------------------------------------------------------------------------------------
+
+**5. Technical Highlights<br>**
+
+5.1. jQuery Usage<br>
+jQuery has been chosen over traditional Javascript for DOM manipulation (dynamically showing and hiding elements), event handling (dropdown changes) and AJAX (loading content from other pages). All filtering and dynamic updates happen instantly without refreshing the page, providing a smooth user experience. Moreover, there is modularity where every function is neatly organized into three separate scripts:<br><br>
+
+a. catalog_filtering.js, which handles filtering<br>
+b. carousel.js, which handles image popups<br>
+c. common.js, which handles shared elements and home page integration<br><br>
+
+4.3. Bootstrap 5 Integration<br>
+Bootstrap 5 has been integrated for its responsive grid systems, interactive media carousels, card component for item display and utility classes that allow easier spacing and alignment of HTML elements.
+<br>
+<br>-----------------------------------------------------------------------------------------------------------
+
+
+
 
 
 
