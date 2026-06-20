@@ -13,8 +13,7 @@ PROF. LEONARDOS MAGEIROS
 OVERVIEW<br>
 The task management system is a full-featured CRUD (Create, Read, Update, Delete) application integrated into the tasks page. It allows business users to manage their daily tasks with persistent storage, filtering, sorting, and activity tracking. The system is designed to be simple, intuitive, and fully functional without requiring a backend server.
 <br>
-<br>
------------------------------------------------------------------------------------------------------------
+<br>-----------------------------------------------------------------------------------------------------------
 
 **1. Data Model<br>**
    Each task is stored as an object with the following properties:
@@ -28,8 +27,7 @@ The task management system is a full-featured CRUD (Create, Read, Update, Delete
 | status      | Enum             | Task state (defaults to "Pending")     |
 
 <br>
-<br>
-------------------------------------------------------------------------------------------------------------
+<br>------------------------------------------------------------------------------------------------------------
 
 **2. User Interface Components<br>**
 
@@ -60,8 +58,7 @@ b. Task Description – text input<br>
 c. Due Date – date picker input<br>
 A Submit button triggers the creation of a new task with "Pending" status.
 <br>
-<br>
------------------------------------------------------------------------------------------------------------
+<br>-----------------------------------------------------------------------------------------------------------
 
 
 **3. Core Features**<br>
@@ -98,8 +95,7 @@ b. ↑ - ascending (A→Z or oldest first)<br>
 c. ↓ - descending (Z→A or newest first)<br><br>
 Only one sort can be active at a time, so if the user tries to activate a second one the other one deactivates. After a sort is applied, the table is re-ordered and re-rendered instantly.
 <br>
-<br>
------------------------------------------------------------------------------------------------------------
+<br>-----------------------------------------------------------------------------------------------------------
 
 **4. Data Persistence**<br>
 
@@ -114,8 +110,7 @@ Activities attributes: timestamp,action,taskName,details<br>
 The data flow goes as follows:<br><br>
 User action -> Javascript logic -> Update tasks array -> Save as CSV to localStorage -> Re-render table -> Update activity log CSV -> Dashboard sync<br>
 <br>
-<br>
------------------------------------------------------------------------------------------------------------
+<br>-----------------------------------------------------------------------------------------------------------
 
 **5. Activity Logging**<br>
 
@@ -136,8 +131,7 @@ The activity log provides an audit-trail of all task-related actions, enabling b
 5.3. Storage<br>
 In regards to the storing logic, there is a separate CSV key in localStorage for activities. The storage is limited to last 20 entries to prevent bloat. A timestamp is generated at the moment of action.
 <br>
-<br>
------------------------------------------------------------------------------------------------------------
+<br>-----------------------------------------------------------------------------------------------------------
 
 **6. Home Page Integration (Dashboard)**<br>
 
@@ -150,8 +144,7 @@ The statistics section of the dashboard shows the number of Pending and Complete
 6.3. Data Sync<br>
 All features read and write from the same localStorage keys and changes made on tasks.html are immediately visible on index.html. Therefore, no backend, no API and no page refresh is required since the scripts do it all.
 <br>
-<br>
------------------------------------------------------------------------------------------------------------
+<br>-----------------------------------------------------------------------------------------------------------
 
 **7. Technical Implementation Highlights**<br>
 
@@ -182,8 +175,7 @@ d. Filter functionality: Users can filter the catalog to show "All", "Guitars", 
 e. Home page integration: The first row of items is automatically extracted and displayed on the home page as "Just In" items<br>
 f. Read‑only catalog: Users cannot make purchases directly, transactions are handled in‑store or through Reverb.
 <br>
-<br>
------------------------------------------------------------------------------------------------------------
+<br>-----------------------------------------------------------------------------------------------------------
 
 **1. Design Choices<br>**
 
@@ -211,8 +203,7 @@ c. Trust: the store focuses on building relationships, not just making sales<br>
 d. Scope: Implementing e‑commerce would require a backend and payment processing, which is beyond the midterm's scope<br><br>
 Therefore, the catalog serves as a virtual showroom that encourages customers to visti the store or contact the team.
 <br>
-<br>
------------------------------------------------------------------------------------------------------------
+<br>-----------------------------------------------------------------------------------------------------------
 
 **2. Implementation Details<br>**
 
@@ -248,8 +239,7 @@ c. Trust: the store focuses on building relationships, not just making sales<br>
 d. Scope: Implementing e‑commerce would require a backend and payment processing, which is beyond the midterm's scope<br><br>
 Therefore, the catalog serves as a virtual showroom that encourages customers to visti the store or contact the team.
 <br>
-<br>
------------------------------------------------------------------------------------------------------------
+<br>-----------------------------------------------------------------------------------------------------------
 
 
 
