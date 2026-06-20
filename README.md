@@ -1,13 +1,14 @@
 THE AMERICAN COLLEGE OF GREECE<br>
 ITC4214 - INTERNET PROGRAMMING<br>
 SUMMER TERM 2026<br>
-NIKOLAOS VAMVAKAS (279123)
+NIKOLAOS VAMVAKAS (279123)<br>
+PROF. LEONARDOS MAGEIROS
 
 **DETAILED REPORT OF MIDTERM COURSEWORK "NICK'S GUITAR EMPORIUM"**
 
 ==============================================================
 
-**PART A: TASK ALLOCATION SYSTEM**
+**PART A: TASK ALLOCATION SYSTEM & ACTIVITY LOGGING**
 
 OVERVIEW<br>
 The task management system is a full-featured CRUD (Create, Read, Update, Delete) application integrated into the tasks page. It allows business users to manage their daily tasks with persistent storage, filtering, sorting, and activity tracking. The system is designed to be simple, intuitive, and fully functional without requiring a backend server.
@@ -163,7 +164,91 @@ Custom functions convert between CSV strings and JavaScript arrays, avoiding ext
 The add form has input validation that prevents the user from entering blank entries. Confirmation prompts are placed for destructive actions like delete or changing the task status. Finally, there is a default demo task for graceful fallback if localStorage is empty.
 <br>
 <br>
+<br>
+==============================================================
+<br>
+<br>
+
+**PART B: THE STORE CATALOG (MY PERSONAL PAGE)**<br><br>
+
+OVERVIEW<br>
+The Catalog page (catalog.html) serves as the virtual showroom for Nick's Guitar Emporium. It displays the store's inventory of vintage guitars and amplifiers in a visually appealing, user‑friendly grid layout. This page was chosen as the "extra page" for the project because an inventory catalog is the most appropriate and functional addition for a guitar shop website. It allows visitors to browse available items, view detailed information, and get a sense of the store's collection before visiting in person or making an inquiry. Key features of this page:<br><br>
+a. Responsive grid layout: Adaptive to any screen size using Bootstrap's grid system<br>
+b. Product cards: Each item displays a carousel of images, a title, a description, and a price<br>
+c. YouTube video integration: Each product includes a video demo in the carousel so users can hear the instrument or amplifier<br>
+d. Filter functionality: Users can filter the catalog to show "All", "Guitars", or "Amps" instantly<br>
+e. Home page integration: The first row of items is automatically extracted and displayed on the home page as "Just In" items<br>
+f. Read‑only catalog: Users cannot make purchases directly, transactions are handled in‑store or through Reverb.
+<br>
 <br>-----------------------------------------------------------------------------------------------------------
+
+**1. Design Choices<br>**
+
+1.1. Grid Layout with Cards<br>
+The catalog uses Bootstrap's responsive grid system with product cards. This design was chosen for several reasons:<br><br>
+a. Uniform look: All products are displayed with consistent sizing and styling<br>
+b. Better UX: Cards present information clearly and are easy to scan<br>
+c. Responsive: The grid adapts to any screen size (1 column on mobile, 2 on tablet, 3 on desktop)<br>
+d. Scalable: New products can be added by simply duplicating a card template<br>
+e. Visual hierarchy: Images, titles, descriptions, and prices are logically structured<br><br>
+
+1.2. Carousel with Video Integration<br>
+Each product features a Bootstrap 5 carousel that includes:<br><br>
+a. Multiple images showing the item from different angles<br>
+b. Youtube video embedded as the final slide. By including a video demo of the item, the catalog gives better evaluation to the user for the item in question, it builds trust given that potential buyers are more confident before visiting the store and reduces uncertainty. Moreover, it provides the user with an engaging experience that make the catalog fell more interactive and informative.<br><br>
+
+1.3. Aspect Ratio Matching<br>
+The carousel maintains a consistent height across all slides using CSS. The benefits of this approach being that images and videos fill the same space alas preventing size changes when sliding and ensures functionality across all devices. Overall, aspect ratio matching gives the carousel slides a professional and polished appearance.<br><br>
+
+1.4. Read-only Catalog<br>
+The catalog is intentionally read-only, there is no shopping car or checkout method. This decision was made because:<br><br>
+a. Business model: Transactions are processed in-store or through Reverb<br>
+b. Customer experience: for high‑value vintage music gear, buyers prefer to try before buying<br>
+c. Trust: the store focuses on building relationships, not just making sales<br>
+d. Scope: Implementing e‑commerce would require a backend and payment processing, which is beyond the midterm's scope<br><br>
+Therefore, the catalog serves as a virtual showroom that encourages customers to visti the store or contact the team.
+<br>
+<br>
+<br>-----------------------------------------------------------------------------------------------------------
+
+**2. Implementation Details<br>**
+
+2.1. Product Categorisation<br>
+Each product card has a class that identifies its category:<br>
+
+| Category | Class  | HTML tag           |
+|----------|--------|--------------------|
+| Guitars  | guitar | class="guitar col" |
+| Amps     | amp    | class="amp col"    |
+This class is used by the filter script to show/hide items based on user selection.<br><br>
+
+
+2.2. Filtering Logic<br>
+The filtering script(catalog_filtering.js) uses jQuery to provide instant, client‑side filtering with no page reload.<br><br>
+How it works:<br>
+a. User selects a filter option from the dropdown<br>
+b. jQuery captures the "change" event<br>
+c. If "All" is selected, then all items become visible.<br>
+d. If "Guitars" or "Amps" is selected, all items are hidden then only the matching category is shown<br>
+
+The benefits of DOM manipulation is that it provides instant results, it is simple code-wise and easily maintainable when it comes to adding new categories.<br><br>
+
+2.3. Image Popup on Click<br>
+The carousel.js script serves the purpose of opening up a carousel image in a new browser tab at full resolution, whenever the user clicks on it. This feature not only allows users to view an image in high-res, but it is also very useful for inspecting condition, wear and craftmanship. Moreover, it is a simple implementation with no extra libraries.<br><br>
+
+1.4. Read-only Catalog<br>
+The catalog is intentionally read-only, there is no shopping car or checkout method. This decision was made because:<br><br>
+a. Business model: Transactions are processed in-store or through Reverb<br>
+b. Customer experience: for high‑value vintage music gear, buyers prefer to try before buying<br>
+c. Trust: the store focuses on building relationships, not just making sales<br>
+d. Scope: Implementing e‑commerce would require a backend and payment processing, which is beyond the midterm's scope<br><br>
+Therefore, the catalog serves as a virtual showroom that encourages customers to visti the store or contact the team.
+<br>
+<br>
+<br>-----------------------------------------------------------------------------------------------------------
+
+
+
 
 
 
