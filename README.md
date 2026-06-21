@@ -289,9 +289,31 @@ c. common.js, which handles shared elements and home page integration<br><br>
 
 4.3. Bootstrap 5 Integration<br>
 Bootstrap 5 has been integrated for its responsive grid systems, interactive media carousels, card component for item display and utility classes that allow easier spacing and alignment of HTML elements.
-<br>
-<br>-----------------------------------------------------------------------------------------------------------
 
+
+==============================================================
+
+**PART C: WEBSITE AUDIT RESULTS**<br><br>
+
+OVERVIEW<br>
+Using Chrome Lighthouse, "Nick's Guitar Emporium" was tested for its accessibility, SEO and performance. The audit results are presented below:<br>
+
+a. ![Accesibility](images/audit/1.png) _Accesibility results_<br><br>
+b. ![SEO](images/audit/2.png) _SEO results_ <br><br>
+c. ![Performance](images/audit/3.png) _Performance results_ <br>
+
+REFLECTION<br>
+The audit results were overall very satisfactory. As it is evident from the screenshots, the website has a very good performance with minor setbacks that can be easily dealt with. SEO is also excellent, meaning that the site is very well optimized for search engines. Accessibility, on the other hand, could be improved a little more, but it is not subpar. The audit was very helpful in determining the weak spots of the website and find ways to mitigate those shortcomings.
+
+==============================================================
+
+**PART D: REFLECTION ON CHALLENGES FACED**<br><br>
+
+During development of "Nick's Guitar Emporium", I faced a couple of challenges that forced me to re-design certain elements. First and foremost, I originally had planned to make the website more interactive by implementing animated features for the HTML elements, such as animating headers and text to appear smoothly while scrolling down or make the buttons more interactive. However, I eventually discovered that since the layout and structure were built from scratch with little to no templates, coding animations would take too much time. Consequently, I would not have been able to build the tasks allocation system in time, and so I opted for a simple but effective and meaningful UI. Moving on, another challenge faced was the API integration on the home page. Originally, I wanted to integrate a Chords API that would display a chord tab according to the user's input, who would submit the chord name on a text field. The reason this feature was scrapped was because after many trials, I found out that the API's chord tab links were basically dead. Thus, after making a short research I discovered a fully working API that generates trivia questions relating to music in general, so I figured that I have found what I needed to cover this requirement. That being said, there were other minor challenges also faced when it came to building the task allocation system, most of which can be attributed to me being a  novice on Javascript. Despite that after a fair bit of research, I managed to cover the minimum functional requirements for this system. All in all, I'm proud of what I managed to build, which is by far one of the most demanding programming tasks I had ever had to do.
+
+==============================================================
+
+Github link: https://github.com/nckvmk/NicksGuitarEmporium.git
 
 
 
