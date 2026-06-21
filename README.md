@@ -80,10 +80,10 @@ All three prompts are pre-filled with current data and the user can either leave
 <br>
 
 3.3. Delete Task<br>
-To delete a task, the user simply clicks the Delete button of the desired task and a confirmation dialog appears to prevent any unwanted action. If confirmed, the task is then removed from the array and localStorage, the table is re-rendered instantly and the activity gets logged (deleted action with task name).<br><br>
+To delete a task, the user simply clicks the Delete button of the desired task and a confirmation dialog appears to prevent any destructive action. If confirmed, the task is then removed from the array and localStorage, the table is re-rendered instantly and the activity gets logged (deleted action with task name).<br><br>
 
 3.4. Mark as Completed<br>
-To mark a task as "Completed", the user simply clicks the "Mark as Complete" button of a pending task. Then, a confirmation dialog appears to prevent any unwanted action. If confirmed, the task's status is then changed from "Pending" to "Completed". Changes are saved to localStorage, the table is re-rendered instantly and the activity is logged (completed action with task name).<br><br>
+To mark a task as "Completed", the user simply clicks the "Mark as Complete" button of a pending task. Then, a confirmation dialog appears to prevent any destructive action. If confirmed, the task's status is then changed from "Pending" to "Completed". Changes are saved to localStorage, the table is re-rendered instantly and the activity is logged (completed action with task name).<br><br>
 
 3.5. Filter Tasks<br>
 Tasks are filtered based on status, which is determined by the 4th column. To apply a filter, the user selects a status from the dropdown menu and the relevant table rows are immediately shown or hidden based on the filter. It works in conjuction with sorting.<br><br>
